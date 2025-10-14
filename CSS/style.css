@@ -1,0 +1,157 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Централизуем шапку и добавляем к ней нижнюю границу */
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+    /* border-bottom: 3px solid orange; */
+}
+
+/* Добавляем псевдоэлемент и изображение, накладываем блюр */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.ibb.co/QWyqtC4/usa-1777986-1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    filter: blur(3px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Добавляем псевдоэлемент и доп. затемняющий слой для читаемости текста */
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Добавляем стили тексту, тени с 3д эффектом */
+h1 {
+    color: #FF8000;
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    /* text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.5); */
+    text-shadow: 2px 2px 0 #000000, 4px 4px 0 #000000, 4px 3px 0 rgb(0, 0, 0);
+}
+
+.news {
+    background-color: #fff;
+    padding: 50px 0 32px;
+}
+
+article {
+    width: 768px;
+    margin: 0 auto 32px;
+    padding: 6px 15px;
+    border-bottom: 1px solid rgb (128, 128, 128);
+}
+
+article a {
+    color: rgb(33, 37, 41);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+}
+
+article a:hover {
+    color: #FF8000;
+}
+
+article h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+}
+
+.article-meta > a {
+    font-style: normal;
+}
+
+.article-meta {
+    color: rgb(134, 142, 150);
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Задаем верхнему и нижнему полю размеры и выравниваем по центру */
+footer {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/* Задаем нижний отступ */
+footer .links {
+    margin-bottom: 50px;
+}
+
+/* Задаем стили ссылкам и добавляем подсвечивание при наведении */
+footer .links > a {
+    color: #838383;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Добавил кайфовую анимацию с подпрыгиванием при наведении на ссылку */
+.links > a:hover {
+    color: #FF8000;
+    transform: translateY(-3px);
+}
+
+.socials {
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials > a:hover {
+    color: #FF8000;
+    transform: translateY(-2px);
+}
+
+/* Задаем размер и отступы логотипам */
+.logo {
+    height: 35px;
+    margin-right: 8px;
+}
+
+/* Стилизуем знак копирайта */
+.copyright {
+    color: rgb(108, 117, 125);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
