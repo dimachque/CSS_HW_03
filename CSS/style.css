@@ -3,6 +3,8 @@ body {
     padding: 0px;
 }
 
+/* 🤯 ШАПКА / HEADER 🤯 */
+
 /* Централизуем шапку и добавляем к ней нижнюю границу */
 header {
     position: relative;
@@ -52,11 +54,44 @@ h1 {
     text-shadow: 2px 2px 0 #000000, 4px 4px 0 #000000, 4px 3px 0 rgb(0, 0, 0);
 }
 
+/* ✍🏼 ARTICLE / КОНТЕНТ / ПОСТЫ / БЛОГ */
+
+.heading-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Красим фон, задаем поля */
 .news {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 50px 0 32px;
 }
 
+/* Задаем стиль краткому описанию новости */
+p {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Задаем стиль для `New` первых 2-ух блогов */
+.New::after {
+    content: "New";
+    color: #FF8000;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #262626;
+}
+
+/* Ценрализуем новостной блог */
 article {
     width: 768px;
     margin: 0 auto 32px;
@@ -64,6 +99,7 @@ article {
     border-bottom: 1px solid rgb (128, 128, 128);
 }
 
+/* Задаем стиль ссылкам */
 article a {
     color: rgb(33, 37, 41);
     text-decoration: none;
@@ -72,41 +108,104 @@ article a {
     display: inline-block;
 }
 
+/* Наваливаем стиля ссылкам при наведении на них */
 article a:hover {
     color: #FF8000;
 }
 
+/* Задаем стиль заголовку новостного блога */
 article h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 5px;
+    margin-top: 0px;
 }
 
+/* Задаем дефолтный стиль текста для имени автора с гиперссылкой */
 .article-meta > a {
     font-style: normal;
+    margin-bottom: 5px;
 }
 
+/* Задаем курсив метаданным (информация об авторе, посте) */
 .article-meta {
-    color: rgb(134, 142, 150);
-    margin-bottom: 5px;
+    color: #838383;
     font-style: italic;
 }
 
+/* Задаем размер новости */
 article img {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
+/* Равномерно распределяем содержимое контейнера по центру  */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Применяем цвет к 2 и 4 новости */
+.news-item:nth-child(even) {
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+/* Задаем стиль контейнеру */
+.news-item {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Анимация подпрыгивания у блогов 2-4 */
+.news-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Задаем разрешение изображениям */
+.news-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Задаем стиль заголовку */
+.news-item h2 {
+    padding: 0;
+    margin: 0 0 5px;
+    font-size: 1.3rem;
+}
+
+/* Стиль для метаданных 2-4 новостных блога */
+.news-item .article-meta {
+    padding: 15px;
+    color: #838383;
+    font-size: 0.9rem;
+}
+
+/* 🪜🦶🏼 ПОДВАЛ */
+
 /* Задаем верхнему и нижнему полю размеры и выравниваем по центру */
 footer {
-    padding-top: 20px;
-    padding-bottom: 60px;
-    text-align: center;
+    border-top: 4px solid #838383;
+    background-color: #f1f1f1;
+    padding: 25px 0 60px 0;
+    text-align: center;    
 }
 
 /* Задаем нижний отступ */
 footer .links {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 /* Задаем стили ссылкам и добавляем подсвечивание при наведении */
@@ -129,24 +228,67 @@ footer .links > a {
     transform: translateY(-3px);
 }
 
+/* Задаем отступы, поля, централизуем */
 .socials {
     margin: 10px;
     padding: 10px;
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
-.socials > a:hover {
-    color: #FF8000;
-    transform: translateY(-2px);
+/* Сдвигаем элемент */
+.socials a {
+    position: relative;
+    /* display: inline-block; */
 }
 
-/* Задаем размер и отступы логотипам */
+/* Прозрачность и плавный переход */
 .logo {
-    height: 35px;
-    margin-right: 8px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* Добавляем 0 прозрачность, чтобы скрыть иконку на заднем фоне */
+.socials a:hover .logo {
+    opacity: 0;
+}
+
+/* Добавляем размер, позицию, время ожидания иконкам и прозрачность для других иконок */
+.socials a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    /* transform: translateY(2px); */
+}
+
+/* Подпрыгивание иконок и убираем прозрачность */
+.socials a:hover::after {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+/* Красим иконку гитхаб */
+.socials a:first-child::after {
+    background-image: url("https://i.ibb.co/ymKzkkqg/github.png");
+}
+
+/* Красим иконку телеграм */
+.socials a:nth-child(2)::after {
+    background-image: url("https://i.ibb.co/Dg1Y3dFZ/telegram-2.png");
+}
+
+/* Красим иконку ВК */
+.socials a:last-child::after {
+    background-image: url("https://i.ibb.co/VYpn9bGg/vk.png");
 }
 
 /* Стилизуем знак копирайта */
@@ -155,3 +297,25 @@ footer .links > a {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+
+/* Задаем границы для иконок с гиперссылками, добавляем положение и время реакции при наведении на них */
+/* .socials {
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+} */
+
+/* Задаем прозрачность, размер и отступы логотипам */
+/* .logo {
+    margin-right: 10px;
+    opacity: 0.6;
+} */
+
+/* Добавляем визуальную анимацию подпрыгивания при наведении на иконки */
+/* .logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+} */

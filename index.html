@@ -7,23 +7,95 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <!-- Баннер -->
     <header>
         <h1>Новости</h1>
     </header>
 
+    <!-- (1) Первый новостной блог с шапкой, картинкой, автором и датой публикации -->
     <section class="news">
+        <!-- валидатор ругается -->
+        <h2 class="heading-hidden">бесполезный заголовок, зато валидатор не ругается</h2>
+
         <article>
             <a href="https://www.supersadovnik.ru/text/amurskij-tigr-interesnye-fakty-o-krasivom-hischnike-i-pochemu-on-okazalsja-na-grani-ischeznovenija-1014431">
-                <h2>Амурские тигры считаются одними из самых красивых</h2>
+                <!-- Добавляем класс "New" для блога №1 -->
+                <h2 class="New">Амурские тигры считаются одними из самых красивых</h2>
             </a>
-            <img src="https://images.unsplash.com/photo-1731689671590-91e2a0741501?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2435" alt="Картинка с амурским тигром" height="450">
+            <p>Что за лев этот тигр</p>
+            <img src="https://images.unsplash.com/photo-1731689671590-91e2a0741501?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2435&clckid=b1e5cefb" alt="Картинка с амурским тигром" height="450">
             <div class="article-meta">
-                Опубликовал <a href="https://github.com/dimachque">Дмитрий С.</a><br>
+                Опубликовал <a href="https://github.com/dimachque"><strong><em>Дмитрий С.</em></strong></a><br>
+                08:08
+            </div>
+        </article>
+    </section>
+
+    <!-- Общий контейнер для новостных блогов 2-4 -->
+    <section class="container">
+        <!-- валидатор ругается -->
+        <h2 class="heading-hidden">бесполезный заголовок, зато валидатор не ругается</h2>
+
+        <!-- (2) Второй новостной блог -->
+        <article class="news-item">
+            <a href="#">
+                <!-- Добавляем класс "New" для блога №2 -->
+            <h2 class="New">Заголовок новости 2</h2>
+            </a>
+            <p>Бархатная осень наступила</p>
+            <img src="https://plus.unsplash.com/premium_photo-1759354756760-b4416a802588?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop&q=80&w=1364" alt="Бархатная осень"   height="450">
+            <div class="article-meta">
+                Опубликовал <a href="https://github.com/dimachque"><strong><em>Дмитрий С.</em></strong></a><br>
+                09:11
+            </div>
+        </article>
+
+        <!-- (3) Третий новостной блог -->
+        <article class="news-item">
+            <a href="#">
+                <h2>Заголовок новости 3</h2>
+            </a>
+            <p>Lorem ipsum dolor sit amet</p>
+            <img src="https://images.unsplash.com/photo-1759800805660-8bc4595568ec?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Картинка с метро" height="450">
+            <div class="article-meta">
+                Опубликовал <a href="https://github.com/dimachque"><strong><em>Дмитрий С.</em></strong></a><br>
+                Вчера
+            </div>
+        </article>
+
+        <!-- (4) Четвертый новостной блог -->
+        <article class="news-item">
+            <a href="#">
+                <h2>Заголовок новости 4</h2>
+            </a>
+            <p>Lorem, ipsum dolor.</p>
+            <img src="https://images.unsplash.com/photo-1760288256101-bb930c69bb61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=formatfit=crop&q=80&w=774" alt="Картинка с грибами" height="450">
+            <div class="article-meta">
+                Опубликовал <a href="https://github.com/dimachque"><strong><em>Дмитрий С.</em></strong></a><br>
                 13 октября 2025
             </div>
         </article>
     </section>
 
+    <!-- (5) Пятый новостной блог -->
+    <section class="news">
+        <!-- валидатор ругается -->
+        <h2 class="heading-hidden">бесполезный заголовок, зато валидатор не ругается</h2>
+        
+        <article>
+            <a href="#">
+                <h2>Заголовок новости 5</h2>
+            </a>
+            <p>Lorem, ipsum dolor 123456.</p>
+            <img src="https://images.unsplash.com/photo-1759841532539-958d013df271?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774" alt="Прогулка по рынку" height="450">
+            <div class="article-meta">
+                Опубликовал <a href="https://github.com/dimachque"><strong><em>Дмитрий С.</em></strong></a><br>
+                13:37, 14 октября 2025
+            </div>
+        </article>
+    </section>
+
+    <!-- Создаем блок с гиперссылками сайта -->
     <footer>
         <div class="links">
             <a href="#">Вакансии</a>
@@ -32,13 +104,19 @@
             <a href="#">Реклама</a>
         </div>
 
+        <!-- Добавляем гиперссылки с иконками соцсетей -->
         <div class="socials">
-            <a href="https://github.com/dimachque"><img class="logo" src="img/github-logo.png" alt="иконка гитхаб"></a>
-            <a href="#"><img class="logo" src="img/telegram.png" alt="иконка телеграм"></a>
-            <a href="#"><img class="logo" src="img/vk.png" alt="иконка вк"></a>
+            <!-- <a href="https://github.com/dimachque"><img class="logo gitgub"></a>
+            <a href="#"><img class="logo telegram"></a>
+            <a href="#"><img class="logo vk"></a> -->
+
+            <a href="https://github.com/dimachque"><img class="logo gitgub" src="https://i.ibb.co/zVKVZZk9/github-back.png" alt="иконка гитхаб"></a>
+            <a href="#"><img class="logo telegram" src="https://i.ibb.co/vx4wxPFY/telegram-back.png" alt="иконка телеграм"></a>
+            <a href="#"><img class="logo vk" src="https://i.ibb.co/C5MykkFD/vk-back.png" alt="иконка вк"></a>
         </div>
 
-        <div class="copyright">Copyright © БыстроНовости 2020</div>
+        <!-- Добавляем копирайт новостного сайта -->
+        <div class="copyright">© 1999–2025 ООО «БыстроНовости.Ру»</div>
     </footer>
 </body>
 </html>
