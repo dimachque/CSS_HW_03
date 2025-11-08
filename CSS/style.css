@@ -278,17 +278,17 @@ footer .links > a {
 
 /* Красим иконку гитхаб */
 .socials a:first-child::after {
-    background-image: url("https://i.ibb.co/ymKzkkqg/github.png");
+    background-image: url("../img/icons/github.png");
 }
 
 /* Красим иконку телеграм */
 .socials a:nth-child(2)::after {
-    background-image: url("https://i.ibb.co/Dg1Y3dFZ/telegram-2.png");
+    background-image: url("../img/icons/telegram.png");
 }
 
 /* Красим иконку ВК */
 .socials a:last-child::after {
-    background-image: url("https://i.ibb.co/VYpn9bGg/vk.png");
+    background-image: url("../img/icons/vk.png");
 }
 
 /* Стилизуем знак копирайта */
